@@ -1,0 +1,93 @@
+.contact-us {
+  background: $color-background;
+}
+.contact-us__wrapper {
+  max-width: 1252px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 53px 15px 0;
+  @include media-laptop {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include media-tablet {
+    padding-top: 39px;
+  }
+  @include media-mobile {
+    padding-top: 25px;
+  }
+}
+.contact-us__image {
+  background-image: url(../../src/assets/image/contact-us__woman.png);
+  @include images(400px, 496px);
+  img {
+    display: block;
+  }
+  @include media-laptop {
+    display: none;
+  }
+}
+.contact-us__h2 {
+  padding: 7px 0 0 45px;
+  font-weight: 700;
+  @include media-tablet {
+    padding: 0;
+    @include font(4rem, 700, 5.2rem);
+    margin-bottom: 99px;
+  }
+  @include media-mobile {
+    @include font(2.5rem, 700, 3.3rem);
+    max-width: 192px;
+    margin-bottom: 81px;
+  }
+}
+.contact-us__accordion {
+  max-height: 50px;
+  display: flex;
+  padding: 14px 35px 17px 20px;
+  margin-top: 95px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: #d6e7d2;
+  @include media-tablet {
+    margin-top: 0;
+    margin-bottom: 250px;
+  }
+  @include media-mobile {
+    padding: 14px 35px 17px 20px;
+    max-width: 300px;
+    margin-bottom: 133px;
+  }
+}
+.contact-us__city {
+  margin-right: 338px;
+  color: $color-service;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  @include media-tablet {
+    margin-right: 240px;
+  }
+  @include media-mobile {
+    margin-right: 200px;
+  }
+}
+.contact-us__accordion-image {
+  padding-top: 3px;
+  img {
+    display: block;
+  }
+}
+.contact-us__image-768 {
+  display: none;
+  @include media-laptop {
+    display: block;
+    background-image: url(../../src/assets/image/contact-us__woman.png);
+    @include images(200px, 248px);
+    margin-left: 20px;
+  }
+  @include media-mobile {
+    @include images(100px, 125px);
+    margin-left: 0;
+  }
+}

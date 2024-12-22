@@ -1,0 +1,48 @@
+.header {
+  background-color: $color-background;
+  padding: 55px 53px 62px 53px;
+  @include media-laptop {
+    padding: 49px 51px 62px 48px;
+  }
+  @include media-mobile {
+    padding: 33px 25px 43px 23px;
+  }
+}
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo-title {
+  @extend %font-add;
+  @include font(1.6rem, 400, normal);
+  
+  @include media-mobile {
+    padding-top: 8px;
+  }
+}
+.header__nav {
+  @include media-mobile {
+    display: none;
+  }
+}
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-link {
+  @extend %font-add;
+  @extend %transition;
+  cursor: pointer;
+}
+.nav-link:not(:last-child) {
+  padding-right: 47px;
+}
+.nav-link:hover {
+  color: $color-prime;
+}

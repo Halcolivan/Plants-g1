@@ -1,0 +1,97 @@
+.welcome {
+  background: $color-background;
+  background-position: 50% 50%;
+  padding: 48px 0 61px 0;
+  @include media-laptop {
+    padding: 17px 50px 70px;
+  }
+  @include media-mobile {
+    padding: 17px 25px 24px;
+  }
+}
+.welcome__wrapper {
+  max-width: 1242px;
+  margin: 0 auto;
+}
+.welcome__container {
+  display: flex;
+  justify-content: space-between;
+  @include media-laptop {
+    flex-direction: row-reverse;
+  }
+  @include media-tablet {
+    flex-wrap: wrap;
+  }
+}
+.welcome__content {
+  padding: 42px 0 0 0;
+  max-width: 559px;
+  @include media-laptop {
+    max-width: 350px;
+    padding: 0;
+  }
+  @include media-mobile {
+  }
+}
+.welcome__h1 {
+  margin-bottom: 44px;
+  @include media-laptop {
+    padding-top: 8px;
+    margin-bottom: 30px;
+  }
+  @include media-tablet {
+    padding-top: 4px;
+  }
+  @include media-mobile {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}
+.welcome__text {
+  max-width: 549px;
+  color: $color-text;
+  @include font(2rem, 400, 175%);
+  margin-bottom: 47px;
+  @include media-laptop {
+    @include font(1.6rem, 400, 2.5rem);
+    padding-left: 5px;
+    margin-bottom: 35px;
+  }
+  @include media-mobile {
+    padding: 0;
+    margin-bottom: 26px;
+  }
+}
+.welcome__button {
+  padding: 11px 26px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid $color-prime;
+  cursor: pointer;
+  @extend %transition-background;
+  @include media-mobile {
+    @include font(1rem, 400, 2rem);
+    padding: 5px 16px;
+  }
+}
+.welcome__button:hover {
+  background: $color-prime;
+  color: $color-light;
+}
+.button-text {
+  @extend %transition;//плавная смена цвета текста внутри кнопки
+  }
+.welcome__leafs {
+  width: 463px;
+  height: 415px;
+  background-image: url(../../src/assets/image/welcome__leafs.png);
+  background-size: cover;
+  background-position: center;
+  @include media-laptop {
+    width: 284px;
+    height: 263px;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}

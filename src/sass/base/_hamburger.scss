@@ -1,0 +1,75 @@
+.hamburger__menu {
+  display: block;
+}
+.hamburger__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $color-prime;
+  padding: 62px 150px;
+  width: 100vw;
+  transform: translateX(-100%);
+  transition: 0.4s;
+  display: grid;
+  gap: 51px;
+}
+.hamburger__item {
+  @include font(1.6rem, 400, normal);
+  list-style-type: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.hamburger__item a {
+  text-decoration: none;
+  color: rgb(1,2,1);
+}
+.hamburger__list.active {
+  transform: translateX(0%);
+}
+
+
+
+
+.hamburger {
+  display: none;
+  @include media-mobile {
+    display: block;
+    border: none;
+    background: transparent;
+    height: 26px;
+    width: 40px;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+  }
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: $color-service;
+}
+.hamburger::before {
+  top: 0;
+  box-shadow: 0 8px $color-service;
+  transition: box-shadow 0.2s 0.1s, transform 0.2s 0.1s, top 0.2s 0.1s;
+}
+.hamburger.active::before {
+  top: 12px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 rgb(0, 128, 0);
+}
+.hamburger::after {
+  bottom: 0;
+  box-shadow: 0 -8px $color-service;
+  transition: box-shadow 0.2s 0.1s, transform 0.2s 0.1s, bottom 0.2s 0.1s;
+}
+.hamburger.active::after {
+  bottom: 12px;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 rgb(0, 128, 0);
+}

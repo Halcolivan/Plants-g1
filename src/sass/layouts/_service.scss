@@ -1,0 +1,164 @@
+.service {
+  background: $color-background;
+  padding: 40px 15px 121px;
+  @include media-laptop {
+    padding: 60px 50px 71px;
+  }
+  @include media-mobile {
+    padding: 30px 25px 27px;
+  }
+}
+.service__head {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  @include media-laptop {
+    margin-bottom: 40px;
+  }
+}
+.service__h2 {
+  max-width: 295px;
+  margin-right: 153px;
+  @include media-laptop {
+    margin-right: 0;
+    margin-bottom: 42px;
+  }
+  @include media-mobile {
+    max-width: 195px;
+    margin-bottom: 38px;
+  }
+}
+.service__buttons {
+  padding: 29px 0 0 0;
+  @include media-laptop {
+    padding: 0;
+  }
+}
+.button {
+  border-radius: 5px;
+  border: 1px solid $color-prime;
+  color: $color-prime;
+  background: transparent;
+  @extend %transition-background;
+  @extend %font-add;
+  @include font(2rem, 400, normal);
+  cursor: pointer;
+  @include media-mobile {
+    @include font(1.5rem, 400, 2rem);
+  }
+}
+.button:hover {
+  background: $color-prime;
+  color: $color-light;
+}
+.button-gardens {
+  padding: 11px 44px 11px 39px;
+  margin-right: 34px;
+  @include media-mobile {
+    padding: 7px 32px 6px 31px;
+    margin-right: 5px;
+    margin-bottom: 9px;
+  }
+}
+.button-lawn {
+  padding: 11px 54px 11px 53px;
+  margin-right: 33px;
+  @include media-mobile {
+    padding: 7px 40px 6px 40px;
+    margin-right: 0;
+  }
+}
+.button-planting {
+  padding: 11px 43px 11px 39px;
+  @include media-mobile {
+    padding: 7px 30px 6px 31px;
+  }
+}
+.service__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 117px;
+  @include media-laptop {
+    gap: 38px 107px;
+  }
+  @include media-mobile {
+    justify-content: center;
+    gap: 34px;
+  }
+}
+.service__item {
+  display: flex;
+  flex-direction: column;
+}
+.service__image-1 {
+  background-image: url(../../src/assets/image/service__first.png);
+  @include images(329px, 350px);
+  @include media-laptop {
+    background-image: url(../../src/assets/image/service__first-768.png);
+    @include images(280px, 350px);
+  }
+}
+.service__image-2 {
+  background-image: url(../../src/assets/image/service__second.png);
+  @include images(329px, 350px);
+  @include media-laptop {
+    background-image: url(../../src/assets/image/service__second-768.png);
+    @include images(280px, 350px);
+  }
+}
+.service__image-3 {
+  background-image: url(../../src/assets/image/service__third.png);
+  @include images(329px, 350px);
+  @include media-laptop {
+    background-image: url(../../src/assets/image/service__third-768.png);
+    @include images(280px, 350px);
+  }
+}
+.service__image-4 {
+  background-image: url(../../src/assets/image/service__fourth.png);
+  @include images(329px, 350px);
+  @include media-laptop {
+    background-image: url(../../src/assets/image/service__fourth-768.png);
+    @include images(280px, 350px);
+  }
+}
+.service__image-5 {
+  background-image: url(../../src/assets/image/service__fifth.png);
+  @include images(329px, 350px);
+  @include media-laptop {
+    background-image: url(../../src/assets/image/service__fifth-768.png);
+    @include images(280px, 350px);
+  }
+}
+.service__image-6 {
+  background-image: url(../../src/assets/image/service__sixth.png);
+  @include images(329px, 350px);
+  @include media-laptop {
+    background-image: url(../../src/assets/image/service__sixth-768.png);
+    @include images(280px, 350px);
+  }
+}
+.service__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+  border: 1px solid #e3e1d5;
+  width: 329px;
+  height: 100px;
+  padding-top: 9px;
+  @include media-laptop {
+    width: 280px;
+    height: 100px;
+  }
+}
+.service__item-title {
+  color: $color-prime;
+  margin-bottom: 15px;
+}
+.service__item-text {
+  @include media-laptop {
+    width: 201px;
+    text-align: center;
+  }
+}
